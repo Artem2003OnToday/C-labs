@@ -6,9 +6,6 @@ typedef enum { false, true } bool;
 typedef enum { kWait, kOk, kExit } status;
 
 #define HEADER_SIZE 10
-#define FRAME_ID_SIZE 4
-#define FRAME_SIZE_SIZE 4
-#define CONTENT_SIZE_SIZE 4
 
 int get_size(char *a) {
     return (a[0] & 0x7F) << 21 | (a[1] & 0x7F) << 14 | (a[2] & 0x7F) << 7 | (a[3] & 0x7F);
